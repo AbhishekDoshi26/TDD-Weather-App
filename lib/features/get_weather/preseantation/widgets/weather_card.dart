@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:tdd_weather/core/util/constants.dart';
-import 'package:tdd_weather/features/get_weather/preseantation/bloc/weather_bloc.dart';
+
+import '../../../../core/util/constants.dart';
+import '../bloc/weather_bloc.dart';
 
 class WeatherCard extends StatelessWidget {
   final WeatherLoaded state;

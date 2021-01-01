@@ -1,8 +1,8 @@
-import 'package:built_collection/built_collection.dart';
 import 'package:chopper/chopper.dart';
-import 'package:tdd_weather/core/util/built_value_converter.dart';
-import 'package:tdd_weather/core/util/constants.dart';
-import 'package:tdd_weather/features/get_weather/data/models/weather_model.dart';
+
+import '../../features/get_weather/data/models/weather_model.dart';
+import '../util/built_value_converter.dart';
+import '../util/constants.dart';
 
 part 'api_client.chopper.dart';
 

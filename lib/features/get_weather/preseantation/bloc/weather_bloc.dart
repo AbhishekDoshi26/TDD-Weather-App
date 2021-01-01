@@ -2,8 +2,9 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:tdd_weather/features/get_weather/data/models/weather_model.dart';
-import 'package:tdd_weather/features/get_weather/domain/usecases/get_weather_usecase.dart';
+
+import '../../data/models/weather_model.dart';
+import '../../domain/usecases/get_weather_usecase.dart';
 
 part 'weather_event.dart';
 part 'weather_state.dart';

@@ -1,8 +1,8 @@
-import 'package:tdd_weather/core/error/exception.dart';
-import 'package:tdd_weather/core/error/failure.dart';
-import 'package:tdd_weather/core/webservice/api_client.dart';
-import 'package:tdd_weather/features/get_weather/data/datasources/weather_remote.dart';
-import 'package:tdd_weather/features/get_weather/data/models/weather_model.dart';
+import '../../../../core/error/exception.dart';
+import '../../../../core/error/failure.dart';
+import '../../../../core/webservice/api_client.dart';
+import '../models/weather_model.dart';
+import 'weather_remote.dart';
 
 class WeatherRemoteImpl implements WeatherRemote {
   final ApiClient client;

@@ -1,6 +1,7 @@
-import 'package:chopper/chopper.dart';
 import 'package:built_collection/built_collection.dart';
-import 'package:tdd_weather/core/util/serializers.dart';
+import 'package:chopper/chopper.dart';
+
+import 'serializers.dart';
 
 class BuiltValueConverter extends JsonConverter {
   final Type errorType;
@@ -10,7 +11,7 @@ class BuiltValueConverter extends JsonConverter {
   @override
   Request convertRequest(Request request) {
     return super.convertRequest(
-      request.replace(
+      request.copyWith(
         body: serializers.serializeWith(
           serializers.serializerForType(request.body.runtimeType),
           request.body,
@@ -28,7 +29,7 @@ class BuiltValueConverter extends JsonConverter {
     final BodyType customBody =
         convertToCustomObject<SingleItemType>(dynamicResponse.body);
 
-    return dynamicResponse.replace<BodyType>(body: customBody);
+    return dynamicResponse.copyWith<BodyType>(body: customBody);
   }
 
   @override
@@ -40,7 +41,7 @@ class BuiltValueConverter extends JsonConverter {
       body = serializers.deserializeWith(serializer, dynamicResponse.body);
     }
     body ??= dynamicResponse.body;
-    return dynamicResponse.replace(body: body);
+    return dynamicResponse.copyWith(body: body);
   }
 
   dynamic convertToCustomObject<SingleItemType>(dynamic element) {

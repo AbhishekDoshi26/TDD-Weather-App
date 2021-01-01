@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tdd_weather/features/get_weather/preseantation/bloc/weather_bloc.dart';
-import 'package:tdd_weather/features/get_weather/preseantation/widgets/weather_card.dart';
+import '../bloc/weather_bloc.dart';
+import '../widgets/weather_card.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);

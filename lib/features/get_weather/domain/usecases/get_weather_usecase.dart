@@ -1,8 +1,9 @@
-import 'package:tdd_weather/core/error/failure.dart';
 import 'package:dartz/dartz.dart';
-import 'package:tdd_weather/core/usecases.dart';
-import 'package:tdd_weather/features/get_weather/data/models/weather_model.dart';
-import 'package:tdd_weather/features/get_weather/domain/repositories/weather_repository.dart';
+
+import '../../../../core/error/failure.dart';
+import '../../../../core/usecases.dart';
+import '../../data/models/weather_model.dart';
+import '../repositories/weather_repository.dart';
 
 class WeatherUseCase extends UseCase<WeatherModel, WeatherParams> {
   final WeatherRepository repository;
