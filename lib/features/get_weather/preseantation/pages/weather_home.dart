@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:tdd_weather/features/get_weather/preseantation/widgets/error_card.dart';
 
 import '../bloc/weather_bloc.dart';
+import '../widgets/error_card.dart';
 import '../widgets/weather_card.dart';
 
 class Home extends StatefulWidget {

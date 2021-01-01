@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tdd_weather/core/util/constants.dart';
+import '../../../../core/util/constants.dart';
 
 class ErrorCard extends StatelessWidget {
   @override
