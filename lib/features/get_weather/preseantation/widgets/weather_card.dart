@@ -30,21 +30,26 @@ class WeatherCard extends StatelessWidget {
             ),
             Text(
               'Current Temperature: ' +
-                  state.weatherModel.temperature.toString(),
+                  state.weatherModel.temperature.toString() +
+                  ' °C',
               style: weatherCardTextStyle,
             ),
             SizedBox(
               height: 10.0,
             ),
             Text(
-              'Today\'s Maximum: ' + state.weatherModel.todayMax.toString(),
+              'Today\'s Maximum: ' +
+                  state.weatherModel.todayMax.toString() +
+                  ' °C',
               style: weatherCardTextStyle,
             ),
             SizedBox(
               height: 10.0,
             ),
             Text(
-              'Today\'s Minimum: ' + state.weatherModel.todayMin.toString(),
+              'Today\'s Minimum: ' +
+                  state.weatherModel.todayMin.toString() +
+                  ' °C',
               style: weatherCardTextStyle,
             ),
             SizedBox(
@@ -52,7 +57,8 @@ class WeatherCard extends StatelessWidget {
             ),
             Text(
               'Yesterday\'s Maximum: ' +
-                  state.weatherModel.yesterdayMax.toString(),
+                  state.weatherModel.yesterdayMax.toString() +
+                  ' °C',
               style: weatherCardTextStyle,
             ),
             SizedBox(
@@ -60,7 +66,8 @@ class WeatherCard extends StatelessWidget {
             ),
             Text(
               'Yesterday\'s Minimum: ' +
-                  state.weatherModel.yesterdayMin.toString(),
+                  state.weatherModel.yesterdayMin.toString() +
+                  ' °C',
               style: weatherCardTextStyle,
             ),
             SizedBox(

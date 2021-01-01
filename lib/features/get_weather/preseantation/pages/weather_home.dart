@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:tdd_weather/features/get_weather/preseantation/widgets/error_card.dart';
 
 import '../bloc/weather_bloc.dart';
 import '../widgets/weather_card.dart';
@@ -26,10 +27,14 @@ class _HomeState extends State<Home> {
           body: BlocBuilder<WeatherBloc, WeatherState>(
             builder: (BuildContext context, state) {
               if (state is WeatherLoading) {
-                print('Weather Loading State');
                 return Center(
-                  child: CircularProgressIndicator(),
+                  child: CircularProgressIndicator(
+                    backgroundColor: Colors.white,
+                  ),
                 );
+              }
+              if (state is WeatherError) {
+                return ErrorCard();
               }
               return Center(
                 child: Column(
